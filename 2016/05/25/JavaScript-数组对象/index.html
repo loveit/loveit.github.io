@@ -1,0 +1,902 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="一个初学者的学习旅程" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="JavaScript 数组对象
+数组是连续存储多个数据的存储空间.现实中数据都是批量分类管理,然而只有批量管理多个数据就要用数组保存.数组是存储一组”相同数据类型”的数据结构;数组使用下标方式来获取某一项数值.
+
+创建数组对象Array1.新建一个长度为0的数组.语法:
+1var 数组名 = new Array();
+举例:
+1var myArr = new Array();
+例子中声明了数组为m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 数组对象">
+<meta property="og:url" content="http://loveit.github.io/2016/05/25/JavaScript-数组对象/index.html">
+<meta property="og:site_name" content="一个初学者的学习旅程">
+<meta property="og:description" content="JavaScript 数组对象
+数组是连续存储多个数据的存储空间.现实中数据都是批量分类管理,然而只有批量管理多个数据就要用数组保存.数组是存储一组”相同数据类型”的数据结构;数组使用下标方式来获取某一项数值.
+
+创建数组对象Array1.新建一个长度为0的数组.语法:
+1var 数组名 = new Array();
+举例:
+1var myArr = new Array();
+例子中声明了数组为m">
+<meta property="og:image" content="http://7xthb7.com1.z0.glb.clouddn.com/2016-05-25/Snip20160525_6.png">
+<meta property="og:updated_time" content="2016-12-16T15:04:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 数组对象">
+<meta name="twitter:description" content="JavaScript 数组对象
+数组是连续存储多个数据的存储空间.现实中数据都是批量分类管理,然而只有批量管理多个数据就要用数组保存.数组是存储一组”相同数据类型”的数据结构;数组使用下标方式来获取某一项数值.
+
+创建数组对象Array1.新建一个长度为0的数组.语法:
+1var 数组名 = new Array();
+举例:
+1var myArr = new Array();
+例子中声明了数组为m">
+<meta name="twitter:image" content="http://7xthb7.com1.z0.glb.clouddn.com/2016-05-25/Snip20160525_6.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> JavaScript 数组对象 | 一个初学者的学习旅程 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?038b73510694094ec4c5332a3038e631";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一个初学者的学习旅程</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">好好学习,天天向上</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript 数组对象
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-25T23:42:46+08:00" content="2016-05-25">
+              2016-05-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/25/JavaScript-数组对象/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/25/JavaScript-数组对象/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/25/JavaScript-数组对象/" class="leancloud_visitors" data-flag-title="JavaScript 数组对象">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="JavaScript-数组对象"><a href="#JavaScript-数组对象" class="headerlink" title="JavaScript 数组对象"></a>JavaScript 数组对象</h2><blockquote>
+<p>数组是连续存储多个数据的存储空间.现实中数据都是批量分类管理,然而只有<strong>批量管理多个数据就要用数组保存</strong>.<br>数组是存储一组”相同数据类型”的数据结构;<br>数组使用下标方式来获取某一项数值.</p>
+</blockquote>
+<h3 id="创建数组对象Array"><a href="#创建数组对象Array" class="headerlink" title="创建数组对象Array"></a>创建数组对象Array</h3><p>1.新建一个长度为0的数组.语法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array();</div></pre></td></tr></table></figure>
+<p>举例:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var myArr = new Array();</div></pre></td></tr></table></figure>
+<p>例子中声明了数组为myArr的数组,数组长度为0.</p>
+<p>2.新建一个长度为n的数组.语法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array(n);</div></pre></td></tr></table></figure>
+<p>举例:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var myArr = new Array(3);</div><div class="line">myArr[0]="HTML";</div><div class="line">myArr[1]="CSS";</div><div class="line">myArr[2]="JavaScript";</div></pre></td></tr></table></figure>
+<p>例子中声明了数组为myArr的数组,数组长度为3.数组中有3个元素,数组元素的数据类型就是字符串类型.</p>
+<p>3.新建指定长度的数组并赋值.语法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array(元素1,元素2,...元素n);</div></pre></td></tr></table></figure>
+<p>举例:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var myArr = new Array(1,2,3,4);</div></pre></td></tr></table></figure>
+<p>例子中声明了数组为myArr的数组,包含了4个元素:1,2,3,4.其中,myArr[0]=1,myArr[1]=2,myArr[2]=3,myArr=[3]=4.</p>
+<p>以上创建Array对象的方法区别如下：</p>
+<ul>
+<li>使用第1种方法创建Array对象时,元素的个数是不确定的,用户可以在赋值时任意定义；</li>
+<li>使用第2种方法创建Array对象时,由于指定了数组的长度,因此在对数组赋值时,元素个数不能超过其指定的长度；</li>
+<li>使用第3种方法创建Array对象时,数组长度由数组元素的个数决定.</li>
+</ul>
+<h3 id="数组元素的赋值与获取"><a href="#数组元素的赋值与获取" class="headerlink" title="数组元素的赋值与获取"></a>数组元素的赋值与获取</h3><ul>
+<li>数组元素的赋值有两种方法:</li>
+</ul>
+<p>1.在创建Array对象时直接赋值;</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array(元素1,元素2,...元素n);</div></pre></td></tr></table></figure>
+<p>2.利用Array对象的元素下标最数组进行赋值;</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array();</div><div class="line">数组名[0] = 元素1;</div><div class="line">数组名[1] = 元素2;</div><div class="line">……</div><div class="line">数组名[n] = 元素(n-1);</div></pre></td></tr></table></figure>
+<p>这个方法直接向Array对象中输入元素值,或者是修改数组中的任意元素值.</p>
+<ul>
+<li>数组元素的获取:获取某一项的值都是通过数组元素的下标来获取.</li>
+</ul>
+<h3 id="对象的属性和方法"><a href="#对象的属性和方法" class="headerlink" title="对象的属性和方法"></a>对象的属性和方法</h3><ul>
+<li>对象属性分别是:length、constructor和prototype.在目前我们只需要掌握length这个属性就可以了.</li>
+</ul>
+<p>语法: <strong>数组名.length</strong> length属性用于获取数组的长度.当使用new Array()方法创建数组时,在不对其进行赋值情况下,length属性的返回值为0.</p>
+<ul>
+<li>对象的常用方法:</li>
+</ul>
+<p><img src="http://7xthb7.com1.z0.glb.clouddn.com/2016-05-25/Snip20160525_6.png" alt=""></p>
+<p>1.<strong>slice()方法</strong>:来获取数组中的某段数组元素.</p>
+<p>语法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.slice(start,end)</div></pre></td></tr></table></figure>
+<p>参数start和end都是整数.其中参数start是必选项,表示开始元素的位置是从0开始计算的.参数end是可选项表示结束元素的位置也是从0开始计算.</p>
+<p>2.<strong>unshift()方法</strong>:在数组开头添加元素,并返回该数组.</p>
+<p>语法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.unshift(新元素1,新元素2,…,新元素n);</div></pre></td></tr></table></figure>
+<p>3.<strong>push()方法</strong>:向数组末尾追加一个或多个元素,并且返回新的长度.</p>
+<p>语法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.push(新元素1,新元素2,...,新元素n);</div></pre></td></tr></table></figure>
+<p>push()方法可以把新的元素按照顺序添加到数组对象中去直接修改数组对象,而不是创建一个新的数组.push()方法和pop()方法使用数组提供的先进后出的功能.</p>
+<p>4.<strong>shift()方法</strong>:来删除数组中第一个元素,并且返回第一个元素的值.</p>
+<p>语法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.shift();</div></pre></td></tr></table></figure>
+<p>其中,unshift()方法用于在数组开头添加元素,shift()方法用于删除数组开头第一个元素.shift方法不创建新的数组,而是直接修改原来的数组对象.</p>
+<p>5.<strong>pop()方法</strong>:删除并返回数组中的最后一个元素。</p>
+<p>语法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.pop();</div></pre></td></tr></table></figure>
+<p>pop()方法将删除数组对象的最后一个元素,并且把数组长度减1,返回它删除的该元素的值.如果数组已经为空,则pop()方法不改变数组,并返回undefined值.</p>
+<p>6.<strong>toString()方法</strong>:将数组转换为字符串,并返回结果.</p>
+<p>语法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.toString()</div></pre></td></tr></table></figure>
+<p>toString()方法将数组转换为字符串时,数组中的元素之间是用<strong>英文逗号</strong>分隔.</p>
+<p>7.<strong>join()方法</strong>:把数组中的所有元素连接成为一个字符串.</p>
+<p>语法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.join("分隔符")</div></pre></td></tr></table></figure>
+<p>分隔符是可选项,用于指定要使用的分隔符.</p>
+<p>8.<strong>concat()方法</strong>:连接两个或多个数组该方法不会改变现有的数值，而仅仅会返回被连接数组的一个副本.concat,就是合并的意思.</p>
+<p>语法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组1.concat(数组2,数组3,…,数组n)</div></pre></td></tr></table></figure>
+<p>9.<strong>sort()方法</strong>:对数组元素进行大小比较排序.</p>
+<p>语法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.sort(函数名)</div></pre></td></tr></table></figure>
+<p>10.<strong>reverse()方法</strong>:将数组中的元素反向排列.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.reverse();</div></pre></td></tr></table></figure>
+<p>reverse()方法改变原来的数组,不会创建新的数组.</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="梅子 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="梅子 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/24/JavaScript-事件/" rel="next" title="JavaScript-事件">
+                <i class="fa fa-chevron-left"></i> JavaScript-事件
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/27/JavaScript-日期对象/" rel="prev" title="JavaScript 日期对象">
+                JavaScript 日期对象 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/25/JavaScript-数组对象/"
+           data-title="JavaScript 数组对象" data-url="http://loveit.github.io/2016/05/25/JavaScript-数组对象/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/pic.png"
+               alt="梅子" />
+          <p class="site-author-name" itemprop="name">梅子</p>
+          <p class="site-description motion-element" itemprop="description">一个口腔医学专业毕业生经历了实习和工作后毅然踏上了码农的路程！相信功夫不负有心人 加油吧！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveit" target="_blank" title="github">
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/5412476571" target="_blank" title="新浪">
+                  
+                  新浪
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/145393324" target="_blank" title="豆瓣">
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/loveit1224" target="_blank" title="知乎">
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:1291724044@qq.com" target="_blank" title="邮箱">
+                  
+                  邮箱
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-数组对象"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 数组对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数组对象Array"><span class="nav-number">1.1.</span> <span class="nav-text">创建数组对象Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组元素的赋值与获取"><span class="nav-number">1.2.</span> <span class="nav-text">数组元素的赋值与获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象的属性和方法"><span class="nav-number">1.3.</span> <span class="nav-text">对象的属性和方法</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梅子</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mei"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("0jg49PpjA2UH9GwnumPDHJHr-gzGzoHsz", "yQsEOIdEufehqxfrixgBNz4Q");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

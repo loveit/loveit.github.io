@@ -1,0 +1,867 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="一个初学者的学习旅程" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="CSS基础
+
+CSS是什么?CSS全称为”层叠样式表(Cascading Style Sheets)”,主要定义HTML内容在浏览器内显示的样式,如文字大小,颜色,字体加粗等.
+
+当然,我们已经知道HTML,CSS和JavaScript是前端技术最核心的三个元素.HTML控制网页的结构,CSS控制网页的外观,JavaScript控制网页的行为.
+CSS样式基本知识
+内联式:就是把css代码直接写入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS入门">
+<meta property="og:url" content="http://loveit.github.io/2016/05/05/CSS入门/index.html">
+<meta property="og:site_name" content="一个初学者的学习旅程">
+<meta property="og:description" content="CSS基础
+
+CSS是什么?CSS全称为”层叠样式表(Cascading Style Sheets)”,主要定义HTML内容在浏览器内显示的样式,如文字大小,颜色,字体加粗等.
+
+当然,我们已经知道HTML,CSS和JavaScript是前端技术最核心的三个元素.HTML控制网页的结构,CSS控制网页的外观,JavaScript控制网页的行为.
+CSS样式基本知识
+内联式:就是把css代码直接写入">
+<meta property="og:image" content="http://7xthb7.com2.z0.glb.clouddn.com/20160505/Snip20160505_6.png">
+<meta property="og:image" content="http://7xthb7.com2.z0.glb.clouddn.com/20160505/Snip20160505_22.png">
+<meta property="og:image" content="http://7xthb7.com2.z0.glb.clouddn.com/20160504/20140722094018_kx5hs.jpeg">
+<meta property="og:updated_time" content="2016-12-16T15:04:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS入门">
+<meta name="twitter:description" content="CSS基础
+
+CSS是什么?CSS全称为”层叠样式表(Cascading Style Sheets)”,主要定义HTML内容在浏览器内显示的样式,如文字大小,颜色,字体加粗等.
+
+当然,我们已经知道HTML,CSS和JavaScript是前端技术最核心的三个元素.HTML控制网页的结构,CSS控制网页的外观,JavaScript控制网页的行为.
+CSS样式基本知识
+内联式:就是把css代码直接写入">
+<meta name="twitter:image" content="http://7xthb7.com2.z0.glb.clouddn.com/20160505/Snip20160505_6.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> CSS入门 | 一个初学者的学习旅程 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?038b73510694094ec4c5332a3038e631";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一个初学者的学习旅程</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">好好学习,天天向上</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS入门
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-05T18:40:13+08:00" content="2016-05-05">
+              2016-05-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/05/CSS入门/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/05/CSS入门/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/05/CSS入门/" class="leancloud_visitors" data-flag-title="CSS入门">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h2><hr>
+<blockquote>
+<p>CSS是什么?CSS全称为”层叠样式表(Cascading Style Sheets)”,主要定义HTML内容在浏览器内显示的样式,如文字大小,颜色,字体加粗等.</p>
+</blockquote>
+<p>当然,我们已经知道HTML,CSS和JavaScript是前端技术最核心的三个元素.<strong>HTML控制网页的结构,CSS控制网页的外观,JavaScript控制网页的行为</strong>.</p>
+<h2 id="CSS样式基本知识"><a href="#CSS样式基本知识" class="headerlink" title="CSS样式基本知识"></a>CSS样式基本知识</h2><hr>
+<h3 id="内联式"><a href="#内联式" class="headerlink" title="内联式:"></a><p style="color:red">内联式:</p></h3><p>就是把css代码直接写入现有的HTML标签中,如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"color:red"</span>&gt;</span>这里文字是红色.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>css样式代码要写在style=””双引号中,如果有多条css样式代码设置可以写在一起,中间用分号隔开.如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"color:red;font-size:12px"</span>&gt;</span>这里文字是红色.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://7xthb7.com2.z0.glb.clouddn.com/20160505/Snip20160505_6.png" alt=""></p>
+<h3 id="嵌入式"><a href="#嵌入式" class="headerlink" title="嵌入式:"></a><p style="color:red">嵌入式:</p></h3><p>可以把样式代码写在<strong>&lt; style type=”text/css”&gt;&lt; /style&gt;</strong>标签之间.如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">    span&#123;</div><div class="line">        color:red;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>嵌入式css样式必须写在&lt; style&gt;&lt; /style&gt;之间.</p>
+<h3 id="外部式"><a href="#外部式" class="headerlink" title="外部式:"></a><p style="color:red">外部式:</p></h3><p>也可叫外联式,把css代码写一个单独的外部文件中,这个css样式文件以”.css”为扩展名,在&lt; head&gt;内使用&lt; link&gt;标签将css样式文件链接到HTML文件内,如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"base.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><hr>
+<blockquote>
+<p>在 CSS 中，选择器是一种模式，用于选择需要添加样式的元素。</p>
+</blockquote>
+<p> 每一条css样式声明(定义)由两部分组成,形式如下:</p>
+<p><img src="http://7xthb7.com2.z0.glb.clouddn.com/20160505/Snip20160505_22.png" alt=""></p>
+<p>  在{}之前的部分是”选择器”,”选择器”指明了{}中的”样式”的作用对象,也就是”样式”作用于网页中的哪些元素.</p>
+<h3 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器:"></a>标签选择器:</h3><p>就是html代码中的标签.如:&lt; html&gt;,&lt; body&gt;,&lt; h1&gt;,&lt; p&gt;,&lt; img&gt;.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;font-size:12px;line-height:1.6em;&#125;</div></pre></td></tr></table></figure>
+<p>   为p标签设置12px字号,行间距设置1.6em样式.</p>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器:"></a>类选择器:</h3><p>在css编码中最常用到的.</p>
+<pre><code>&lt;span style=&quot;color:red&quot;;font-size:100&gt;.&lt;/span&gt;类选择器名称{css样式代码;}
+**英文圆点开头**,class=&quot;类选择器名称&quot;.
+</code></pre><h3 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器:"></a>ID选择器:</h3><p>为标签设置id=”ID名称”,而不是class=”类名称”.ID选择符前面是井号<strong>(#)</strong>号,而不是英文圆点(.).<br> 要注意的是<strong>ID选择器只能在文档中使用一次,类选择器可以使用多次.</strong></p>
+<h3 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器:"></a>子选择器:</h3><p>即大于符号(&gt;), 如果您不希望选择任意的后代元素，而是希望缩小范围，只选择某个元素的子元素，请使用子元素选择器（Child selector）。<br>例如，如果您希望选择只作为 h1 元素子元素的 strong 元素，可以这样写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">h1 &gt; strong &#123;color:red;&#125;</div></pre></td></tr></table></figure>
+<p>这个规则会把第一个 h1 下面的两个 strong 元素变为红色，但是第二个 h1 中的 strong 不受影响：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is <span class="tag">&lt;<span class="name">strong</span>&gt;</span>very<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> <span class="tag">&lt;<span class="name">strong</span>&gt;</span>very<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> important.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is <span class="tag">&lt;<span class="name">em</span>&gt;</span>really <span class="tag">&lt;<span class="name">strong</span>&gt;</span>very<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span> important.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="包含-后代-选择器"><a href="#包含-后代-选择器" class="headerlink" title="包含(后代)选择器:"></a>包含(后代)选择器:</h3><p>即加入<strong>空格</strong>,用于指定标签元素下的<strong>后辈元素</strong>.<br> <strong>&gt;</strong>作用于元素的<strong>第一代</strong>后代,<strong>空格</strong>作用于元素的<strong>所有</strong>后代.</p>
+<h3 id="通用选择器"><a href="#通用选择器" class="headerlink" title="通用选择器:"></a>通用选择器:</h3><p>是功能最强大的选择器,它使用一个( <em> )号指定,作用是匹配html中<em>*所有</em></em>标签.如下代码可以使html中任意标签元素字体颜色全部设置为红色:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*&#123;color:red;&#125;</div></pre></td></tr></table></figure>
+<h3 id="伪类选择符"><a href="#伪类选择符" class="headerlink" title="伪类选择符:"></a>伪类选择符:</h3><p>因为它允许给html不存在的标签设置样式,不如说我们给html中一个标签元素的<span style="color:red">鼠标滑过的状态</span>来设置字体颜色:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a:hover&#123;color:red;&#125;</div></pre></td></tr></table></figure>
+<p> 关于伪类选择符,可以兼容所有浏览器的”伪类选择符”就是a标签上使用:hover了.</p>
+<h3 id="分类选择符"><a href="#分类选择符" class="headerlink" title="分类选择符:"></a>分类选择符:</h3><p>为html中多个标签元素设置同一个样式时,可以使用分组选择符<strong>(,)</strong>.如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">h1,span&#123;color:red;&#125;</div></pre></td></tr></table></figure>
+<p> 它相当于下面两行代码:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">h1&#123;color:red;&#125;</div><div class="line">span&#123;color:red;&#125;</div></pre></td></tr></table></figure>
+<p>   恩今天就分享到这里吧,明天再继续了解后面的知识.<br> <img src="http://7xthb7.com2.z0.glb.clouddn.com/20160504/20140722094018_kx5hs.jpeg" alt=""></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="梅子 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="梅子 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/04/HTML-知识汇总/" rel="next" title="HTML-知识汇总">
+                <i class="fa fa-chevron-left"></i> HTML-知识汇总
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/11/JavaScript-入门/" rel="prev" title="JavaScript-入门">
+                JavaScript-入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/05/CSS入门/"
+           data-title="CSS入门" data-url="http://loveit.github.io/2016/05/05/CSS入门/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/pic.png"
+               alt="梅子" />
+          <p class="site-author-name" itemprop="name">梅子</p>
+          <p class="site-description motion-element" itemprop="description">一个口腔医学专业毕业生经历了实习和工作后毅然踏上了码农的路程！相信功夫不负有心人 加油吧！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveit" target="_blank" title="github">
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/5412476571" target="_blank" title="新浪">
+                  
+                  新浪
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/145393324" target="_blank" title="豆瓣">
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/loveit1224" target="_blank" title="知乎">
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:1291724044@qq.com" target="_blank" title="邮箱">
+                  
+                  邮箱
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS基础"><span class="nav-number">1.</span> <span class="nav-text">CSS基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS样式基本知识"><span class="nav-number">2.</span> <span class="nav-text">CSS样式基本知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内联式"><span class="nav-number">2.1.</span> <span class="nav-text">内联式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌入式"><span class="nav-number">2.2.</span> <span class="nav-text">嵌入式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外部式"><span class="nav-number">2.3.</span> <span class="nav-text">外部式:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS选择器"><span class="nav-number">3.</span> <span class="nav-text">CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标签选择器"><span class="nav-number">3.1.</span> <span class="nav-text">标签选择器:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类选择器"><span class="nav-number">3.2.</span> <span class="nav-text">类选择器:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ID选择器"><span class="nav-number">3.3.</span> <span class="nav-text">ID选择器:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子选择器"><span class="nav-number">3.4.</span> <span class="nav-text">子选择器:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包含-后代-选择器"><span class="nav-number">3.5.</span> <span class="nav-text">包含(后代)选择器:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通用选择器"><span class="nav-number">3.6.</span> <span class="nav-text">通用选择器:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪类选择符"><span class="nav-number">3.7.</span> <span class="nav-text">伪类选择符:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类选择符"><span class="nav-number">3.8.</span> <span class="nav-text">分类选择符:</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梅子</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mei"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("0jg49PpjA2UH9GwnumPDHJHr-gzGzoHsz", "yQsEOIdEufehqxfrixgBNz4Q");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

@@ -1,0 +1,859 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="一个初学者的学习旅程" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="表单脚本表单基础知识
+在HTML中,表单是由&amp;lt; from &amp;gt;元素来表示的,而在JS中,表单对应的是HTMLForm-Element类型.取得&amp;lt; form &amp;gt;元素引用的方式有几种.其中最常见的方式就是将它看成与其他元素元素一样,并为其添加id特性,然后再像下面这样使用getElementById()方法找到它.
+
+1var form = document.getElement">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript-表单脚本">
+<meta property="og:url" content="http://loveit.github.io/2016/07/04/JavaScript-表单脚本/index.html">
+<meta property="og:site_name" content="一个初学者的学习旅程">
+<meta property="og:description" content="表单脚本表单基础知识
+在HTML中,表单是由&amp;lt; from &amp;gt;元素来表示的,而在JS中,表单对应的是HTMLForm-Element类型.取得&amp;lt; form &amp;gt;元素引用的方式有几种.其中最常见的方式就是将它看成与其他元素元素一样,并为其添加id特性,然后再像下面这样使用getElementById()方法找到它.
+
+1var form = document.getElement">
+<meta property="og:updated_time" content="2016-12-16T15:04:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript-表单脚本">
+<meta name="twitter:description" content="表单脚本表单基础知识
+在HTML中,表单是由&amp;lt; from &amp;gt;元素来表示的,而在JS中,表单对应的是HTMLForm-Element类型.取得&amp;lt; form &amp;gt;元素引用的方式有几种.其中最常见的方式就是将它看成与其他元素元素一样,并为其添加id特性,然后再像下面这样使用getElementById()方法找到它.
+
+1var form = document.getElement">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> JavaScript-表单脚本 | 一个初学者的学习旅程 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?038b73510694094ec4c5332a3038e631";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一个初学者的学习旅程</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">好好学习,天天向上</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript-表单脚本
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-04T23:30:45+08:00" content="2016-07-04">
+              2016-07-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/04/JavaScript-表单脚本/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/04/JavaScript-表单脚本/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/04/JavaScript-表单脚本/" class="leancloud_visitors" data-flag-title="JavaScript-表单脚本">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="表单脚本"><a href="#表单脚本" class="headerlink" title="表单脚本"></a>表单脚本</h2><h3 id="表单基础知识"><a href="#表单基础知识" class="headerlink" title="表单基础知识"></a>表单基础知识</h3><blockquote>
+<p>在HTML中,表单是由&lt; from &gt;元素来表示的,而在JS中,表单对应的是HTMLForm-Element类型.<br>取得&lt; form &gt;元素引用的方式有几种.其中最常见的方式就是将它看成与其他元素元素一样,并为其添加id特性,然后再像下面这样使用getElementById()方法找到它.</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var form = document.getElementById("form1");</div></pre></td></tr></table></figure>
+<p>其次,通过document.forms可以取得页面中所有的表单.在这个集合中,可以通过数值索引或name值来取得特定的表单.如下例:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var firstForm =document.forms[0];		  //取得页面中的第一个表单</div><div class="line">var myForm =document.forms["form2"];  //取得页面中名称为"form2"的表单</div></pre></td></tr></table></figure>
+<p>1.提交表单: 用户单击提交按钮时,就会提交表单.使用&lt; input &gt;或&lt; button &gt;都可以定义提交按钮,只要将其type特性的值设置为”submit”即可,而图像按钮则是通过将&lt; input &gt;的type特性值设置为”image”来定义的.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 通用提交按钮 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>= <span class="string">"submit"</span> <span class="attr">value</span>= <span class="string">"Submit Form"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 自定义提交按钮 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>= <span class="string">"submit"</span>&gt;</span>Submit Form<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 图像按钮 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>= <span class="string">"image"</span> <span class="attr">src</span>=<span class="string">"graphic.gif"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>2.重置表单: 在用户单击重置按钮时,表单会被重叠.使用type特性值为”reset”的&lt; input &gt;或&lt; button &gt;都可以创建重置按钮.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 通用重置按钮 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>= <span class="string">"reset"</span> <span class="attr">value</span>=<span class="string">"Rest Form"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 自定义重置按钮 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>= <span class="string">"reset"</span>&gt;</span>Rest Form<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>3.表单字段: 可以像访问页面中其他元素一样,使用原生DOM方法访问表单元素.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var form = document.getElementById("form1");</div><div class="line"></div><div class="line">//取得表单中的第一个字段</div><div class="line">var field1 = form.elements[0];</div><div class="line"></div><div class="line">//取得名为"textbox1"的字段</div><div class="line">var field2 = form.elements["textbox1"];</div><div class="line"></div><div class="line">//取得表单中包含的字段的数量</div><div class="line">var fieldCount = form.elements.length;</div></pre></td></tr></table></figure>
+<h3 id="文本框脚本"><a href="#文本框脚本" class="headerlink" title="文本框脚本"></a>文本框脚本</h3><blockquote>
+<p>在HTML中,有两种方式来表现文本框: 一种是使用&lt; input &gt;元素的单行文本框,另一种是使用&lt; textarea &gt;的多行文本框.</p>
+</blockquote>
+<p>1.&lt; input &gt;元素的单行文本框:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">size</span>=<span class="string">"25"</span> <span class="attr">maxlength</span>=<span class="string">"50"</span> <span class="attr">value</span>=<span class="string">"initial value"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这个文本框,单行显示25个字符,输入不能超过50个字符,初始值为initial value.</p>
+<p>2.&lt; textarea &gt;元素的多行文本框:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">"25"</span> <span class="attr">cols</span>=<span class="string">"25"</span>&gt;</span>initial value<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这个文本框,25行,每行显示25个字符.</p>
+<p>两种文本框可以通过value属性读取和设置文本框的值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var textbox = document.forms[0].elements["textbox1"];</div><div class="line">alert(textbox.value);</div><div class="line">textbox.value = "Some new value";</div></pre></td></tr></table></figure>
+<p>3.select()方法：</p>
+<p>该方法用于选择文本框中的所有文本.<br>在文本框获得焦点时选择其所有文本.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">EventUtil.addHandler(textbox,"focus",function(event)&#123;</div><div class="line"> event = EventUtil.getEvent(event);</div><div class="line"> var target = EventUtil.getTarget(event);</div><div class="line"> target.select();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>select事件:<br>在选择了文本框中的文本时,就会触发select事件.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined">       </span></div><div class="line">(function()&#123;                   </div><div class="line"> function getSelectedText(textbox)&#123;              </div><div class="line">   if (document.selection)&#123;                   </div><div class="line">   return document.selection.createRange().text;               </div><div class="line">  &#125;</div><div class="line">  else</div><div class="line">  &#123;                      </div><div class="line"> return textbox.value.substring(textbox.selectionStart,textbox.selectionEnd);                  </div><div class="line">&#125;             </div><div class="line">  &#125;                                     </div><div class="line">  EventUtil.addHandler(window, "load", function(event)&#123;               </div><div class="line">   var  textbox = document.forms[0].elements[0];                   </div><div class="line">   EventUtil.addHandler(textbox, "select", function(event)&#123;                       </div><div class="line">alert(getSelectedText(textbox));               </div><div class="line">   &#125;);                   </div><div class="line">  textbox.focus();           </div><div class="line">  &#125;);                      </div><div class="line">&#125;)();      </div><div class="line"> <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p> 4.剪贴板事件:</p>
+<p>beforecopy:在发生复制操作前触发；<br>copy：在发生复制操作时触发；<br>beforecut：在发生剪切操作前触发；<br>cut：在发生剪切操作时触发；<br>beforepaste：在发生粘贴操作前触发；<br>paste：在发生粘贴操作时触发；<br>注:<br>在实际的事件发生之前,通过beforecopy、beforecut和beforepaste事件可以在向剪贴板发送数据,或者从剪贴板取得数据之前修改数据.通过取消copy、cut和paste事件,阻止相应操作发生.</p>
+<h3 id="选择框脚本"><a href="#选择框脚本" class="headerlink" title="选择框脚本"></a>选择框脚本</h3><blockquote>
+<p>选择框通过&lt; select &gt;和&lt; option &gt;元素创建的.</p>
+</blockquote>
+<p>1.HTMLSelectElement类型:</p>
+<p>HTMLSelectElement类型提供的方法和属性.<br>add(newOption,relOption):向控件中插入新的<option>元素,其位置在指定项<reloption>之前.<br>multiple:布尔值,表示是否允许多项选择；<br>options：控件中所有<option>元素的HTMLCollection.<br>remove(index)：移除给定位置的选项.<br>selectedIndex:基于0的选中项的索引,如果没有选中项,则值为-1.对于支持多选的控件,只保存选中项中的第一项的索引.<br>size：选择框中可见的行数.</option></reloption></option></p>
+<p>2.HTMLOptionElement类型:</p>
+<p>index:当前选项在options集合中的索引.<br>label:当前选项的标签；<br>selected：布尔值,表示当前选项是否被选中.<br>text:选项的文本.<br>value:选项的值.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var selectbox = document.forms[0].location;</div><div class="line">var value = selectbox.options[0].value;</div><div class="line">var text = selectbox.options[0].text;</div></pre></td></tr></table></figure>
+<p>3.选择选项:<br>对于这个选择框：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"location"</span> <span class="attr">id</span>=<span class="string">"selLocation"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Sunnyvale, CA"</span>&gt;</span>Sunnyvale<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Los Angeles, CA"</span>&gt;</span>Los Angeles<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Mountain View, CA"</span>&gt;</span>Mountain View<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>China<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>Australia<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>获得选中项：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var selIndex = selectbox.selectedIndex;</div><div class="line">var selOption = selectbox.options[selIndex];</div><div class="line">alert("Selected index: " + selectbox.selectedIndex + "\nSelected text: " + selOption.text + "\nSelected value: " + selOption.value);</div></pre></td></tr></table></figure></p>
+<p>4.添加选项:<br>通过选择框的add()方法.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var newOption = new Option("option text","Option value");</div><div class="line">selectbox.add(newOption,undefined);//将newOption插入到列表最后</div></pre></td></tr></table></figure>
+<p>5.移除选项:<br>使用选择框的remove()方法.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">selectbox.remove(0);  //移除第一个选项</div></pre></td></tr></table></figure>
+<p>6.移动（左移和右移）和重排（上移和下移）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var btn = document.getElementByIdx_x_x("btnMove");</div><div class="line"></div><div class="line">EventUtil.addHandler(btn, "click", function(event);</div><div class="line">var selectbox1 = document.getElementByIdx_x_x("selLocations1");</div><div class="line">var selectbox2 = document.getElementByIdx_x_x("selLocations2");</div><div class="line">selectbox2.a(selectbox1.options[selectbox1.selectedIndex]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>重排代码:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var btnUp = document.getElementByIdx_x_x("btnUp");</div><div class="line">var btnDown = document.getElementByIdx_x_x("btnDown");</div><div class="line"></div><div class="line">EventUtil.addHandler(btnUp, "click", function(event)&#123;</div><div class="line">var selectbox = document.getElementByIdx_x_x("selLocations");</div><div class="line">var optionToMove = selectbox.options[selectbox.selectedIndex];</div><div class="line"></div><div class="line">if (optionToMove.index &gt; 0)&#123;</div><div class="line">selectbox.insertBefore(optionToMove, selectbox.options[optionToMove.index-1]);</div><div class="line">&#125;</div><div class="line">&#125;);       </div><div class="line"></div><div class="line">EventUtil.addHandler(btnDown, "click", function(event)&#123;</div><div class="line">var selectbox = document.getElementByIdx_x_x("selLocations");</div><div class="line">var optionToMove = selectbox.options[selectbox.selectedIndex];</div><div class="line"></div><div class="line">selectbox.insertBefore(optionToMove, selectbox.options[optionToMove.index+2]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>表单序列化就明天再分享吧 ~</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="梅子 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="梅子 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/01/Canvas 绘图/" rel="next" title="JavaScript-Canvas绘图">
+                <i class="fa fa-chevron-left"></i> JavaScript-Canvas绘图
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/08/JavaScript-表单序列化/" rel="prev" title="JavaScript-表单序列化">
+                JavaScript-表单序列化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/04/JavaScript-表单脚本/"
+           data-title="JavaScript-表单脚本" data-url="http://loveit.github.io/2016/07/04/JavaScript-表单脚本/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/pic.png"
+               alt="梅子" />
+          <p class="site-author-name" itemprop="name">梅子</p>
+          <p class="site-description motion-element" itemprop="description">一个口腔医学专业毕业生经历了实习和工作后毅然踏上了码农的路程！相信功夫不负有心人 加油吧！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveit" target="_blank" title="github">
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/5412476571" target="_blank" title="新浪">
+                  
+                  新浪
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/145393324" target="_blank" title="豆瓣">
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/loveit1224" target="_blank" title="知乎">
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:1291724044@qq.com" target="_blank" title="邮箱">
+                  
+                  邮箱
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#表单脚本"><span class="nav-number">1.</span> <span class="nav-text">表单脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表单基础知识"><span class="nav-number">1.1.</span> <span class="nav-text">表单基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本框脚本"><span class="nav-number">1.2.</span> <span class="nav-text">文本框脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择框脚本"><span class="nav-number">1.3.</span> <span class="nav-text">选择框脚本</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梅子</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mei"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("0jg49PpjA2UH9GwnumPDHJHr-gzGzoHsz", "yQsEOIdEufehqxfrixgBNz4Q");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
