@@ -1,0 +1,910 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="一个初学者的学习旅程" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="CSS盒模型元素分类在讲解CSS布局之前,我们需要提前知道一些知识,在CSS中,html中的标签元素大体被分为三种不同的类型:块状元素、内联元素(又叫行内元素)和内联块状元素.常用的块状元素有:
+1&amp;lt;div&amp;gt;、&amp;lt;p&amp;gt;、&amp;lt;h1&amp;gt;...&amp;lt;h6&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;ul&amp;gt;、&amp;lt;dl&amp;gt;、&amp;lt;table&amp;gt;、&amp;lt;addr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS盒模型及文字排版">
+<meta property="og:url" content="http://loveit.github.io/2016/05/06/CSS盒模型及文字排版/index.html">
+<meta property="og:site_name" content="一个初学者的学习旅程">
+<meta property="og:description" content="CSS盒模型元素分类在讲解CSS布局之前,我们需要提前知道一些知识,在CSS中,html中的标签元素大体被分为三种不同的类型:块状元素、内联元素(又叫行内元素)和内联块状元素.常用的块状元素有:
+1&amp;lt;div&amp;gt;、&amp;lt;p&amp;gt;、&amp;lt;h1&amp;gt;...&amp;lt;h6&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;ul&amp;gt;、&amp;lt;dl&amp;gt;、&amp;lt;table&amp;gt;、&amp;lt;addr">
+<meta property="og:image" content="http://7xthb7.com2.z0.glb.clouddn.com/20160506/1.jpg">
+<meta property="og:updated_time" content="2016-12-16T15:46:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS盒模型及文字排版">
+<meta name="twitter:description" content="CSS盒模型元素分类在讲解CSS布局之前,我们需要提前知道一些知识,在CSS中,html中的标签元素大体被分为三种不同的类型:块状元素、内联元素(又叫行内元素)和内联块状元素.常用的块状元素有:
+1&amp;lt;div&amp;gt;、&amp;lt;p&amp;gt;、&amp;lt;h1&amp;gt;...&amp;lt;h6&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;ul&amp;gt;、&amp;lt;dl&amp;gt;、&amp;lt;table&amp;gt;、&amp;lt;addr">
+<meta name="twitter:image" content="http://7xthb7.com2.z0.glb.clouddn.com/20160506/1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> CSS盒模型及文字排版 | 一个初学者的学习旅程 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?038b73510694094ec4c5332a3038e631";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一个初学者的学习旅程</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">好好学习,天天向上</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS盒模型及文字排版
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-06T16:52:30+08:00" content="2016-05-06">
+              2016-05-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/06/CSS盒模型及文字排版/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/06/CSS盒模型及文字排版/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/06/CSS盒模型及文字排版/" class="leancloud_visitors" data-flag-title="CSS盒模型及文字排版">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h2><h3 id="元素分类"><a href="#元素分类" class="headerlink" title="元素分类"></a>元素分类</h3><p>在讲解CSS布局之前,我们需要提前知道一些知识,在CSS中,html中的标签元素大体被分为三种不同的类型:<strong>块状元素、内联元素(又叫行内元素)和内联块状元素</strong>.<br><em>常用的块状元素有</em>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>、<span class="tag">&lt;<span class="name">p</span>&gt;</span>、<span class="tag">&lt;<span class="name">h1</span>&gt;</span>...<span class="tag">&lt;<span class="name">h6</span>&gt;</span>、<span class="tag">&lt;<span class="name">ol</span>&gt;</span>、<span class="tag">&lt;<span class="name">ul</span>&gt;</span>、<span class="tag">&lt;<span class="name">dl</span>&gt;</span>、<span class="tag">&lt;<span class="name">table</span>&gt;</span>、<span class="tag">&lt;<span class="name">address</span>&gt;</span>、<span class="tag">&lt;<span class="name">blockquote</span>&gt;</span> 、<span class="tag">&lt;<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><em>常用的内联元素有</em>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>、<span class="tag">&lt;<span class="name">span</span>&gt;</span>、<span class="tag">&lt;<span class="name">br</span>&gt;</span>、<span class="tag">&lt;<span class="name">i</span>&gt;</span>、<span class="tag">&lt;<span class="name">em</span>&gt;</span>、<span class="tag">&lt;<span class="name">strong</span>&gt;</span>、<span class="tag">&lt;<span class="name">label</span>&gt;</span>、<span class="tag">&lt;<span class="name">q</span>&gt;</span>、<span class="tag">&lt;<span class="name">var</span>&gt;</span>、<span class="tag">&lt;<span class="name">cite</span>&gt;</span>、<span class="tag">&lt;<span class="name">code</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><em>常用的内联块状元素有</em>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span>&gt;</span>和<span class="tag">&lt;<span class="name">input</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h4><p>什么是块级元素？在html中&lt; div&gt;、 &lt; p&gt;、&lt; h1&gt;、&lt; form&gt;、&lt; ul&gt; 和 &lt; li&gt;就是块级元素.设置<strong>display:block</strong>就是将元素显示为块级元素.<br>如下代码就是将<em>内联元素a</em>转换为<em>块状元素</em>,从而使a元素具有<em>块状元素</em>特点.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a&#123;display:block;&#125;</div></pre></td></tr></table></figure></p>
+<p>块级元素特点：</p>
+<ul>
+<li><p>每个块级元素都从新的一行开始,并且其后的元素也另起一行.</p>
+</li>
+<li><p>元素的高度、宽度、行高以及顶和底边距都可设置.</p>
+</li>
+<li><p>元素宽度在不设置的情况下,是它本身父容器的100%（和父元素的宽度一致),除非设定一个宽度.</p>
+</li>
+</ul>
+<h4 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h4><p>在html中,&lt; span&gt;、&lt; a&gt;、&lt; label&gt;、 &lt; strong&gt; 和&lt; em&gt;就是典型的<em>内联元素(行内元素)</em>(inline)元素.当然<em>块状元素</em>也可以通过代码<strong>display:inline</strong>将元素设置为<em>内联元素</em>.<br>如下代码就是将块状元素div转换为内联元素，从而使div元素具有内联元素特点.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> div&#123;</div><div class="line">     display:inline;</div><div class="line">     &#125;</div><div class="line">......</div><div class="line"></div><div class="line"> <span class="tag">&lt;<span class="name">div</span>&gt;</span>我要变成内联元素<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>   内联元素的特点:</p>
+<ul>
+<li>和其他元素都在一行上.</li>
+<li>元素的<strong>高度、宽度</strong>及顶部和底部边距<strong>不可</strong>设置.</li>
+<li>元素的宽度就是它包含的文字或图片的宽度,不可改变.</li>
+</ul>
+<h4 id="内联块状元素"><a href="#内联块状元素" class="headerlink" title="内联块状元素"></a>内联块状元素</h4><p><em>内联块状元素</em>(inline-block)就是同时具备内联元素、块状元素的特点,代码<strong>display:inline-block</strong>就是将元素设置为内联块状元素.(css2.1新增),&lt; img&gt;、&lt; input&gt;标签就是这种内联块状标签.</p>
+<p>内联块状元素的特点：</p>
+<ul>
+<li>和其他元素都在一行上；</li>
+<li>元素的高度、宽度、行高以及顶和底边距<strong>可</strong>设置。</li>
+</ul>
+<h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3><p>在浏览器下,每一个html元素都会被解析为一个装有东西的盒子.盒子本身有自己的<strong>边框(border)</strong>,盒子里的内容到盒子边框的距离称为<strong>填充(padding)</strong>,盒子边框与其它盒子之间的距离为<strong>边界(margin)</strong>.<br>在css模型设计中,元素真实的宽度和高度不仅仅由width和height来决定,还包括内边距、外边距、边框来组成.</p>
+<h4 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h4><p>盒子模型的<strong>边框</strong>就是围绕着<strong>内容</strong>及<strong>补白</strong>的线,这条线你可以设置它的<strong>粗细</strong>和<strong>样式</strong>和<strong>颜色</strong>.</p>
+<ul>
+<li>border-style(边框样式)常见样式有:dashed(虚线)dotted(点线)solid(实现).</li>
+<li>border-color(边框颜色)中的颜色可设置为十六进制颜色.</li>
+<li><p>border-width(边框宽度)中的宽度可以设置为:thin,medium,thick(但不是很常用),最常用的是像素(px).</p>
+<p>css样式中允许只为一个方向的边框设置样式:</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;border-bottom:1px solid red;&#125;</div></pre></td></tr></table></figure>
+<p>同样也可以使用下面代码实现其他三边(上右左)边框的设置:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">border-top:1px solid red;</div><div class="line">border-right:1px solid red;</div><div class="line">border-lef:1px solid red;</div></pre></td></tr></table></figure>
+<h4 id="宽度和高度"><a href="#宽度和高度" class="headerlink" title="宽度和高度"></a>宽度和高度</h4><p>盒模型宽度和高度和我们平常所说的物体的宽度和高度理解是不一样的,css内定义的宽(width)和高(height),指的是填充以里的<strong>内容范围</strong>.<br>因此一个<strong>元素实际宽度</strong>(盒子的宽度)=左边界+左边框+左填充+内容宽度+右填充+右边框+右边界.<br><img src="http://7xthb7.com2.z0.glb.clouddn.com/20160506/1.jpg" alt=""><br>元素的高度也是同理.</p>
+<h4 id="填充"><a href="#填充" class="headerlink" title="填充"></a>填充</h4><p>元素<strong>内容</strong>与<strong>边框</strong>之间是可以设置距离的,称之为”<strong>填充</strong>“.填充也可分为上、右、下、左(顺时针).<br>如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;padding:20px 10px 15px 30px;&#125;</div></pre></td></tr></table></figure>
+<p><strong>顺序一定不能搞混</strong>,也可以分开写上面的代码.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">    padding-top:20px;</div><div class="line">    padding-right:10px;</div><div class="line">    padding-bottom:15px;</div><div class="line">    padding-left:30px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果上、右、下、左的填充都为10px:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;padding:10px;&#125;</div></pre></td></tr></table></figure>
+<p>如果上下填充一样为10px,左右一样为20px:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;padding:10px 20px;&#125;</div></pre></td></tr></table></figure>
+<h4 id="边界"><a href="#边界" class="headerlink" title="边界"></a>边界</h4><p>元素与其它元素之间的距离可以使用边界(margin)来设置.边界也是可分为上、右、下、左.<br>如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;morgin:20px 10px 15px 30px;&#125;</div></pre></td></tr></table></figure>
+<p>也可以分开写:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">   margin-top:20px;</div><div class="line">   margin-right:10px;</div><div class="line">   margin-bottom:15px;</div><div class="line">   margin-left:30px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果上右下左的边界都为10px:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123; margin:10px&#125;</div></pre></td></tr></table></figure>
+<p>如果上下边界一样为10px,左右一样为20px:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123; margin:10px 20px;&#125;</div></pre></td></tr></table></figure>
+<p> 注意:<strong>padding在边框里,margin在边框外.</strong></p>
+<h2 id="文字格式化排版"><a href="#文字格式化排版" class="headerlink" title="文字格式化排版"></a>文字格式化排版</h2><p>可以使用css样式为网页中的文字设置字体,字号,颜色等样式属性.</p>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><ul>
+<li>网页中的文字设置为宋体:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">body&#123;font-family:"宋体";&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>设置微软雅黑:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">body&#123;font-family:"Microsoft Yahei";&#125;</div></pre></td></tr></table></figure>
+<p> <strong>注意不要设置不常用的字体</strong></p>
+<h4 id="css样式改变文字的样式-粗体-斜体-下划线-删除线"><a href="#css样式改变文字的样式-粗体-斜体-下划线-删除线" class="headerlink" title="css样式改变文字的样式:粗体,斜体,下划线,删除线."></a>css样式改变文字的样式:粗体,斜体,下划线,删除线.</h4><ul>
+<li>粗体:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;font-weight:bold;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>斜体:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;font-style:italic;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>下划线:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;text-decoration:underline;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>删除线:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.oldPrice&#123;text-decoration:line-through;&#125;</div></pre></td></tr></table></figure>
+<h3 id="字号颜色"><a href="#字号颜色" class="headerlink" title="字号颜色"></a>字号颜色</h3><p>如为文字设置字号为12px,字体颜色设置为灰色:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">body&#123;font-size:12px;color:#666&#125;</div></pre></td></tr></table></figure>
+<h3 id="段落排版"><a href="#段落排版" class="headerlink" title="段落排版"></a>段落排版</h3><ul>
+<li>中文文字中的段前习惯两个文字的空白,这个特殊的样式可以用下面代码来实现:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;text-indent:2em;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>行间距:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;line-height:1.5em;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>中文字间距:<strong>文字间隔</strong>或者<strong>字母间隔</strong>使用 <strong>letter-spacing</strong></li>
+<li>英文单词间距:<strong>word-spacing</strong></li>
+<li>对齐:为块状元素中的文本,图片设置居中样式,可以使用<strong>text-align</strong>.<br>同样也可以设置居左:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">h1&#123;</div><div class="line">    text-align:left;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>还可以设置居右:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">h1&#123;</div><div class="line">    text-align:right;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>自认为今天的内容好烧脑,明天就可以结束整个css的学习了.你们怎么样?</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="梅子 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="梅子 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/05/CSS入门/" rel="next" title="CSS入门">
+                <i class="fa fa-chevron-left"></i> CSS入门
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/07/CSS代码缩写及单位和值/" rel="prev" title="CSS代码缩写及单位和值">
+                CSS代码缩写及单位和值 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/06/CSS盒模型及文字排版/"
+           data-title="CSS盒模型及文字排版" data-url="http://loveit.github.io/2016/05/06/CSS盒模型及文字排版/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/pic.png"
+               alt="梅子" />
+          <p class="site-author-name" itemprop="name">梅子</p>
+          <p class="site-description motion-element" itemprop="description">一个口腔医学专业毕业生经历了实习和工作后毅然踏上了码农的路程！相信功夫不负有心人 加油吧！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveit" target="_blank" title="github">
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/5412476571" target="_blank" title="新浪">
+                  
+                  新浪
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/145393324" target="_blank" title="豆瓣">
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/loveit1224" target="_blank" title="知乎">
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:1291724044@qq.com" target="_blank" title="邮箱">
+                  
+                  邮箱
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS盒模型"><span class="nav-number">1.</span> <span class="nav-text">CSS盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元素分类"><span class="nav-number">1.1.</span> <span class="nav-text">元素分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#块级元素"><span class="nav-number">1.1.1.</span> <span class="nav-text">块级元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内联元素"><span class="nav-number">1.1.2.</span> <span class="nav-text">内联元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内联块状元素"><span class="nav-number">1.1.3.</span> <span class="nav-text">内联块状元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒模型"><span class="nav-number">1.2.</span> <span class="nav-text">盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#边框"><span class="nav-number">1.2.1.</span> <span class="nav-text">边框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#宽度和高度"><span class="nav-number">1.2.2.</span> <span class="nav-text">宽度和高度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#填充"><span class="nav-number">1.2.3.</span> <span class="nav-text">填充</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#边界"><span class="nav-number">1.2.4.</span> <span class="nav-text">边界</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字格式化排版"><span class="nav-number">2.</span> <span class="nav-text">文字格式化排版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字体"><span class="nav-number">2.1.</span> <span class="nav-text">字体</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#css样式改变文字的样式-粗体-斜体-下划线-删除线"><span class="nav-number">2.1.1.</span> <span class="nav-text">css样式改变文字的样式:粗体,斜体,下划线,删除线.</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字号颜色"><span class="nav-number">2.2.</span> <span class="nav-text">字号颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#段落排版"><span class="nav-number">2.3.</span> <span class="nav-text">段落排版</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梅子</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mei"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("0jg49PpjA2UH9GwnumPDHJHr-gzGzoHsz", "yQsEOIdEufehqxfrixgBNz4Q");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

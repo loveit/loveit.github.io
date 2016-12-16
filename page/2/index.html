@@ -261,443 +261,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/06/27/JavaScript-日期对象/" itemprop="url">
-                  JavaScript 日期对象
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-27T21:42:29+08:00" content="2016-06-27">
-              2016-06-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/27/JavaScript-日期对象/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/27/JavaScript-日期对象/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/06/27/JavaScript-日期对象/" class="leancloud_visitors" data-flag-title="JavaScript 日期对象">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="JavaScript-日期对象"><a href="#JavaScript-日期对象" class="headerlink" title="JavaScript 日期对象"></a>JavaScript 日期对象</h2><h3 id="创建Date对象"><a href="#创建Date对象" class="headerlink" title="创建Date对象"></a>创建Date对象</h3><ul>
-<li>方法一 :</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 日期对象名 = new Date();</div></pre></td></tr></table></figure>
-<p>用于获取系统的时间.</p>
-<ul>
-<li>方法二 :</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 日期对象名 = new Date(日期字符串);</div></pre></td></tr></table></figure>
-<p>有几种形式: “2016-6-15” “June 15,2016”  “2016/6/15”.</p>
-<h3 id="Date对象方法"><a href="#Date对象方法" class="headerlink" title="Date对象方法"></a>Date对象方法</h3><ul>
-<li>主要分为3大组: setXxx,getXxx,toXxx.</li>
-</ul>
-<p>getXxx用于获取时间和日期值;</p>
-<p>setXxx用于设置时间和日期值;</p>
-<p>toXxx将日期转换为字符串格式.</p>
-<p><img src="http://7xthb7.com1.z0.glb.clouddn.com/2016-06-15/Snip20160615_7.png" alt=""></p>
-<p><img src="http://7xthb7.com1.z0.glb.clouddn.com/2016-06-15/Snip20160615_8.png" alt=""></p>
-<p><img src="http://7xthb7.com1.z0.glb.clouddn.com/2016-06-15/Snip20160615_9.png" alt=""></p>
-<h3 id="获取当前完整日期时间"><a href="#获取当前完整日期时间" class="headerlink" title="获取当前完整日期时间"></a>获取当前完整日期时间</h3><ul>
-<li>直接使用Date()方法返回系统当前日期时间.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Date()</div></pre></td></tr></table></figure>
-<h3 id="获取当前年、月、日"><a href="#获取当前年、月、日" class="headerlink" title="获取当前年、月、日"></a>获取当前年、月、日</h3><ul>
-<li>返回一个表示年份的4位数字</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getFullYear()</div></pre></td></tr></table></figure>
-<ul>
-<li>返回值是0(一月)到11(十二月)之间的一个整数</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getMonth()</div></pre></td></tr></table></figure>
-<ul>
-<li>返回值是1~31之间的一个整数</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getDate()</div></pre></td></tr></table></figure>
-<h3 id="设置当前年、月、日"><a href="#设置当前年、月、日" class="headerlink" title="设置当前年、月、日"></a>设置当前年、月、日</h3><ul>
-<li>使用setFullYear()方法设置日期对象中的年份</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">日期对象.setFullYear(year,month,day)</div></pre></td></tr></table></figure>
-<p>说明:</p>
-<p>参数year是必选项,表示年份的4位整数,用本地时间表示.</p>
-<p>参数month是可选项,表示月份的数值,介于0~11之间,用本地时间表示.</p>
-<p>参数day是可选项,表示月份中某一天的数值,介于1~31之间,用本地时间表示.</p>
-<ul>
-<li>使用setMonth()方法可以设置日期对象中的月份.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">日期对象.setMonth(month,day)</div></pre></td></tr></table></figure>
-<p>说明:参数month是必选项,表示月份的数值,介于0~11之间,用本地时间表示.</p>
-<p>参数day是可选项,表示月份中某一天的数值,介于1~31之间,用本地时间表示.</p>
-<ul>
-<li>使用setDate()方法可以设置日期对象中的日数.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">日期对象.setDate(day)</div></pre></td></tr></table></figure>
-<p>说明:参数day是必选项,表示月份中某一天的数值,介于1~31之间,用本地时间表示.</p>
-<h3 id="获取当前时、分、秒"><a href="#获取当前时、分、秒" class="headerlink" title="获取当前时、分、秒"></a>获取当前时、分、秒</h3><ul>
-<li>返回值是0~23之间的一个整数,来表示小时数.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getHours()</div></pre></td></tr></table></figure>
-<ul>
-<li>返回值是0~59之间的一个整数,来表示分钟数.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getMinutes()</div></pre></td></tr></table></figure>
-<ul>
-<li>返回值是0~59之间的一个整数,来表示秒数.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getSeconds()</div></pre></td></tr></table></figure>
-<h3 id="设置当前时、分、秒"><a href="#设置当前时、分、秒" class="headerlink" title="设置当前时、分、秒"></a>设置当前时、分、秒</h3><ul>
-<li>使用setHours()方法可以设置日期对象中的小时.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">日期对象.setHours(hour,min,sec,millisec)</div></pre></td></tr></table></figure>
-<p>说明:</p>
-<p>参数hour为必选项,表示小时的数值,是0~23之间的一个整数.</p>
-<p>参数min为可选项,表示分钟的数值,是0~59之间的一个整数.</p>
-<p>参数sec为可选项,表示秒数,是0~59之间的一个整数.</p>
-<p>参数millisec为可选项,表示毫秒数,是0~999之间的一个整数.</p>
-<ul>
-<li>使用setMinutes()方法可以设置日期对象中的分钟.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">日期对象.setMinutes(min,sec,millisec)</div></pre></td></tr></table></figure>
-<p>说明:</p>
-<p>参数min为必选项,表示分钟的数值,是0~59之间的一个整数.</p>
-<p>参数sec为可选项,表示秒数,是0~59之间的一个整数.</p>
-<p>参数millisec为可选项,表示毫秒数,是0~999之间的一个整数.</p>
-<ul>
-<li>使用setSeconds()方法可以设置日期对象的秒数.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">日期对象.setSeconds(sec,millisec)</div></pre></td></tr></table></figure>
-<p>说明:</p>
-<p>参数sec为必选项,表示秒数,是0~59之间的一个整数.</p>
-<p>参数millisec为可选项,表示毫秒数,是0~999之间的一个整数.</p>
-<h3 id="将日期转换为字符串"><a href="#将日期转换为字符串" class="headerlink" title="将日期转换为字符串"></a>将日期转换为字符串</h3><ul>
-<li>使用toString()方法可以将日期对象Date转换为字符串,并返回结果.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">日期对象.toString()</div></pre></td></tr></table></figure>
-<ul>
-<li>使用toUTCString()方法可根据世界时间(UTC)把Date对象转换为字符串,并返回结果.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">日期对象.toUTCString()</div></pre></td></tr></table></figure>
-<ul>
-<li>使用toLocalString()方法可根据本地时间把Date对象转换为字符串,并返回结果.</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">toLocaleString()</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/25/JavaScript-数组对象/" itemprop="url">
-                  JavaScript 数组对象
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-25T23:42:46+08:00" content="2016-05-25">
-              2016-05-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/25/JavaScript-数组对象/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/25/JavaScript-数组对象/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/05/25/JavaScript-数组对象/" class="leancloud_visitors" data-flag-title="JavaScript 数组对象">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="JavaScript-数组对象"><a href="#JavaScript-数组对象" class="headerlink" title="JavaScript 数组对象"></a>JavaScript 数组对象</h2><blockquote>
-<p>数组是连续存储多个数据的存储空间.现实中数据都是批量分类管理,然而只有<strong>批量管理多个数据就要用数组保存</strong>.<br>数组是存储一组”相同数据类型”的数据结构;<br>数组使用下标方式来获取某一项数值.</p>
-</blockquote>
-<h3 id="创建数组对象Array"><a href="#创建数组对象Array" class="headerlink" title="创建数组对象Array"></a>创建数组对象Array</h3><p>1.新建一个长度为0的数组.语法:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array();</div></pre></td></tr></table></figure>
-<p>举例:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var myArr = new Array();</div></pre></td></tr></table></figure>
-<p>例子中声明了数组为myArr的数组,数组长度为0.</p>
-<p>2.新建一个长度为n的数组.语法:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array(n);</div></pre></td></tr></table></figure>
-<p>举例:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var myArr = new Array(3);</div><div class="line">myArr[0]="HTML";</div><div class="line">myArr[1]="CSS";</div><div class="line">myArr[2]="JavaScript";</div></pre></td></tr></table></figure>
-<p>例子中声明了数组为myArr的数组,数组长度为3.数组中有3个元素,数组元素的数据类型就是字符串类型.</p>
-<p>3.新建指定长度的数组并赋值.语法:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array(元素1,元素2,...元素n);</div></pre></td></tr></table></figure>
-<p>举例:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var myArr = new Array(1,2,3,4);</div></pre></td></tr></table></figure>
-<p>例子中声明了数组为myArr的数组,包含了4个元素:1,2,3,4.其中,myArr[0]=1,myArr[1]=2,myArr[2]=3,myArr=[3]=4.</p>
-<p>以上创建Array对象的方法区别如下：</p>
-<ul>
-<li>使用第1种方法创建Array对象时,元素的个数是不确定的,用户可以在赋值时任意定义；</li>
-<li>使用第2种方法创建Array对象时,由于指定了数组的长度,因此在对数组赋值时,元素个数不能超过其指定的长度；</li>
-<li>使用第3种方法创建Array对象时,数组长度由数组元素的个数决定.</li>
-</ul>
-<h3 id="数组元素的赋值与获取"><a href="#数组元素的赋值与获取" class="headerlink" title="数组元素的赋值与获取"></a>数组元素的赋值与获取</h3><ul>
-<li>数组元素的赋值有两种方法:</li>
-</ul>
-<p>1.在创建Array对象时直接赋值;</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array(元素1,元素2,...元素n);</div></pre></td></tr></table></figure>
-<p>2.利用Array对象的元素下标最数组进行赋值;</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var 数组名 = new Array();</div><div class="line">数组名[0] = 元素1;</div><div class="line">数组名[1] = 元素2;</div><div class="line">……</div><div class="line">数组名[n] = 元素(n-1);</div></pre></td></tr></table></figure>
-<p>这个方法直接向Array对象中输入元素值,或者是修改数组中的任意元素值.</p>
-<ul>
-<li>数组元素的获取:获取某一项的值都是通过数组元素的下标来获取.</li>
-</ul>
-<h3 id="对象的属性和方法"><a href="#对象的属性和方法" class="headerlink" title="对象的属性和方法"></a>对象的属性和方法</h3><ul>
-<li>对象属性分别是:length、constructor和prototype.在目前我们只需要掌握length这个属性就可以了.</li>
-</ul>
-<p>语法: <strong>数组名.length</strong> length属性用于获取数组的长度.当使用new Array()方法创建数组时,在不对其进行赋值情况下,length属性的返回值为0.</p>
-<ul>
-<li>对象的常用方法:</li>
-</ul>
-<p><img src="http://7xthb7.com1.z0.glb.clouddn.com/2016-05-25/Snip20160525_6.png" alt=""></p>
-<p>1.<strong>slice()方法</strong>:来获取数组中的某段数组元素.</p>
-<p>语法:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.slice(start,end)</div></pre></td></tr></table></figure>
-<p>参数start和end都是整数.其中参数start是必选项,表示开始元素的位置是从0开始计算的.参数end是可选项表示结束元素的位置也是从0开始计算.</p>
-<p>2.<strong>unshift()方法</strong>:在数组开头添加元素,并返回该数组.</p>
-<p>语法:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.unshift(新元素1,新元素2,…,新元素n);</div></pre></td></tr></table></figure>
-<p>3.<strong>push()方法</strong>:向数组末尾追加一个或多个元素,并且返回新的长度.</p>
-<p>语法:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.push(新元素1,新元素2,...,新元素n);</div></pre></td></tr></table></figure>
-<p>push()方法可以把新的元素按照顺序添加到数组对象中去直接修改数组对象,而不是创建一个新的数组.push()方法和pop()方法使用数组提供的先进后出的功能.</p>
-<p>4.<strong>shift()方法</strong>:来删除数组中第一个元素,并且返回第一个元素的值.</p>
-<p>语法:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.shift();</div></pre></td></tr></table></figure>
-<p>其中,unshift()方法用于在数组开头添加元素,shift()方法用于删除数组开头第一个元素.shift方法不创建新的数组,而是直接修改原来的数组对象.</p>
-<p>5.<strong>pop()方法</strong>:删除并返回数组中的最后一个元素。</p>
-<p>语法：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.pop();</div></pre></td></tr></table></figure>
-<p>pop()方法将删除数组对象的最后一个元素,并且把数组长度减1,返回它删除的该元素的值.如果数组已经为空,则pop()方法不改变数组,并返回undefined值.</p>
-<p>6.<strong>toString()方法</strong>:将数组转换为字符串,并返回结果.</p>
-<p>语法：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.toString()</div></pre></td></tr></table></figure>
-<p>toString()方法将数组转换为字符串时,数组中的元素之间是用<strong>英文逗号</strong>分隔.</p>
-<p>7.<strong>join()方法</strong>:把数组中的所有元素连接成为一个字符串.</p>
-<p>语法：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.join("分隔符")</div></pre></td></tr></table></figure>
-<p>分隔符是可选项,用于指定要使用的分隔符.</p>
-<p>8.<strong>concat()方法</strong>:连接两个或多个数组该方法不会改变现有的数值，而仅仅会返回被连接数组的一个副本.concat,就是合并的意思.</p>
-<p>语法:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组1.concat(数组2,数组3,…,数组n)</div></pre></td></tr></table></figure>
-<p>9.<strong>sort()方法</strong>:对数组元素进行大小比较排序.</p>
-<p>语法:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.sort(函数名)</div></pre></td></tr></table></figure>
-<p>10.<strong>reverse()方法</strong>:将数组中的元素反向排列.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组对象.reverse();</div></pre></td></tr></table></figure>
-<p>reverse()方法改变原来的数组,不会创建新的数组.</p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/05/24/JavaScript-事件/" itemprop="url">
                   JavaScript-事件
                 </a>
@@ -1942,6 +1505,429 @@
 <li>ECMA-262是JavaScript标准的官方名称.</li>
 <li>JavaScript由Brendan Eich发明.它于1995年出现在 Netscape中(该浏览器已停止更新),并于1997年被ECMA(一个标准协会)采纳.  </li>
 </ul>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/07/CSS代码缩写及单位和值/" itemprop="url">
+                  CSS代码缩写及单位和值
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-07T23:33:45+08:00" content="2016-05-07">
+              2016-05-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/07/CSS代码缩写及单位和值/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/07/CSS代码缩写及单位和值/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/07/CSS代码缩写及单位和值/" class="leancloud_visitors" data-flag-title="CSS代码缩写及单位和值">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="CSS代码缩写"><a href="#CSS代码缩写" class="headerlink" title="CSS代码缩写"></a>CSS代码缩写</h2><h3 id="盒模型代码简写"><a href="#盒模型代码简写" class="headerlink" title="盒模型代码简写"></a>盒模型代码简写</h3><p>首先回顾一下我们讲盒模型时外边距（margin）内边距(padding)合边框（border）设置上下左右四个方向的边距是按照顺时针方向设置的：<strong>上右下左</strong>。具体应用在margin合padding的例子如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">margin:10px 15px 12px 14px;/* 上设置为10px、设置为15px、设置为12px、左设置为14px */</div></pre></td></tr></table></figure>
+<p>通常有三种<em>缩写</em>方法：</p>
+<p>1.如果top、right、bottom、left的值相同，如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">margin:10px 10px 10px 10px;</div></pre></td></tr></table></figure>
+<p>可缩写为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">margin:10px;</div></pre></td></tr></table></figure>
+<p>2.如果top和bottom值相同、left和 right的值相同，如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">margin:10px 20px 10px 20px;</div></pre></td></tr></table></figure>
+<p>可缩写为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">margin:10px 20px;</div></pre></td></tr></table></figure>
+<p>3.如果left和right的值相同，如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">margin:10px 20px 30px 20px;</div></pre></td></tr></table></figure>
+<p>可缩写为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">margin:10px 20px 30px;</div></pre></td></tr></table></figure>
+<p> <strong>padding、border的缩写方法和margin是一致的.</strong></p>
+<h3 id="颜色值缩写"><a href="#颜色值缩写" class="headerlink" title="颜色值缩写"></a>颜色值缩写</h3><p>对于颜色的CSS样式也是可以缩写的,当你设置的颜色是16进制的彩色值时,如果每两位的数值相同,可以缩写一半.如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;color:#000000;&#125;</div></pre></td></tr></table></figure>
+<p>可缩写为:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;color: #000;&#125;</div></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;color: #336699;&#125;</div></pre></td></tr></table></figure>
+<p>可缩写为:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;color: #369;&#125;</div></pre></td></tr></table></figure>
+<h3 id="字体缩写"><a href="#字体缩写" class="headerlink" title="字体缩写"></a>字体缩写</h3><p>当然网页中的字体CSS样式代码也有缩写方式，如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> body&#123;</div><div class="line">     font-style:italic;</div><div class="line">     font-variant:small-caps;</div><div class="line">     font-weight:bold;</div><div class="line">     font-size:12px;</div><div class="line">     line-height:1.5em;</div><div class="line">     font-family:"宋体"，sans-serif;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面的代码当然也是可以缩写的只包含字号、行间距、中文字体、英文字体设置.如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    font:12px/1.5em "宋体",sans-serif;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="单位和值"><a href="#单位和值" class="headerlink" title="单位和值"></a>单位和值</h2><p>在网页中颜色设置是非常重要,有字体颜色(color)、背景颜色(background-color)、边框颜色(border)等,设置颜色的方法如下:</p>
+<ul>
+<li><p>英文命令颜色</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;color:red;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>RGB颜色<br>与photoshop中的RGB颜色是一致的,由R(red)、G(green)、B(blue)三种颜色的比例来配色.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;color:rgb(133,45,200);&#125;</div></pre></td></tr></table></figure>
+<p>每项的值可以是0~255之间的整数,也可以是0%~100%的百分数.如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;color:rgb(20%,33%,25%);&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>十六进制颜色<br><strong>是现在比较普遍使用的方法</strong>,原理也是RGB设置,但是其每一项的值由0~255变成了十六进制00~ff.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;color:#00ffff;&#125;</div></pre></td></tr></table></figure>
+<p><em>配色表</em><br><img src="http://7xthb7.com2.z0.glb.clouddn.com/5-7-1.jpg" alt=""></p>
+<h3 id="长度值"><a href="#长度值" class="headerlink" title="长度值"></a>长度值</h3><p>长度单位经常用到px(像素)、em、%,这三种单位都是相对单位.</p>
+<ul>
+<li>像素<br>指的是显示器上的小点(CSS规范中假设”90像素=1英寸”).实际情况是浏览器会使用显示器的实际像素值有关,目前大多数设计者都倾向于使用像素(px)作为单位.</li>
+<li>em<br>是本元素给定字体的 font-size 值,如果元素的font-size为14px,那么1em=14px;如果font-size为18px,那么1em=18px.如下(段落首行缩进24px也就是两个字体的大小距离):</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;font-size:12px;text-indent:2em;&#125;</div></pre></td></tr></table></figure>
+<p>有个特殊情况:当font-size设置单位为<strong>em</strong>时,此时的计算标准以p的父元素的font-size为基础.如下:</p>
+<p>html:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>以这个<span class="tag">&lt;<span class="name">span</span>&gt;</span>例子<span class="tag">&lt;/<span class="name">span</span>&gt;</span>为例.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>CSS:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p&#123;font-size:14px;&#125;</div><div class="line">span&#123;font-size:0.8em;&#125;</div></pre></td></tr></table></figure>
+<p>结果就是span中的字体”例子”字大小就为11.2px(14*0.8=12px).</p>
+<ul>
+<li>百分比</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;font-size:12px;line-height:130%&#125;</div></pre></td></tr></table></figure>
+<p>设置行高(行间距)为字体的130%(12*1.3=15.6px).</p>
+<p>今天周末就分享这些了,你们学的怎么样?</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/06/CSS盒模型及文字排版/" itemprop="url">
+                  CSS盒模型及文字排版
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-06T16:52:30+08:00" content="2016-05-06">
+              2016-05-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/06/CSS盒模型及文字排版/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/06/CSS盒模型及文字排版/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/06/CSS盒模型及文字排版/" class="leancloud_visitors" data-flag-title="CSS盒模型及文字排版">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h2><h3 id="元素分类"><a href="#元素分类" class="headerlink" title="元素分类"></a>元素分类</h3><p>在讲解CSS布局之前,我们需要提前知道一些知识,在CSS中,html中的标签元素大体被分为三种不同的类型:<strong>块状元素、内联元素(又叫行内元素)和内联块状元素</strong>.<br><em>常用的块状元素有</em>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>、<span class="tag">&lt;<span class="name">p</span>&gt;</span>、<span class="tag">&lt;<span class="name">h1</span>&gt;</span>...<span class="tag">&lt;<span class="name">h6</span>&gt;</span>、<span class="tag">&lt;<span class="name">ol</span>&gt;</span>、<span class="tag">&lt;<span class="name">ul</span>&gt;</span>、<span class="tag">&lt;<span class="name">dl</span>&gt;</span>、<span class="tag">&lt;<span class="name">table</span>&gt;</span>、<span class="tag">&lt;<span class="name">address</span>&gt;</span>、<span class="tag">&lt;<span class="name">blockquote</span>&gt;</span> 、<span class="tag">&lt;<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><em>常用的内联元素有</em>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>、<span class="tag">&lt;<span class="name">span</span>&gt;</span>、<span class="tag">&lt;<span class="name">br</span>&gt;</span>、<span class="tag">&lt;<span class="name">i</span>&gt;</span>、<span class="tag">&lt;<span class="name">em</span>&gt;</span>、<span class="tag">&lt;<span class="name">strong</span>&gt;</span>、<span class="tag">&lt;<span class="name">label</span>&gt;</span>、<span class="tag">&lt;<span class="name">q</span>&gt;</span>、<span class="tag">&lt;<span class="name">var</span>&gt;</span>、<span class="tag">&lt;<span class="name">cite</span>&gt;</span>、<span class="tag">&lt;<span class="name">code</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><em>常用的内联块状元素有</em>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span>&gt;</span>和<span class="tag">&lt;<span class="name">input</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h4><p>什么是块级元素？在html中&lt; div&gt;、 &lt; p&gt;、&lt; h1&gt;、&lt; form&gt;、&lt; ul&gt; 和 &lt; li&gt;就是块级元素.设置<strong>display:block</strong>就是将元素显示为块级元素.<br>如下代码就是将<em>内联元素a</em>转换为<em>块状元素</em>,从而使a元素具有<em>块状元素</em>特点.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a&#123;display:block;&#125;</div></pre></td></tr></table></figure></p>
+<p>块级元素特点：</p>
+<ul>
+<li><p>每个块级元素都从新的一行开始,并且其后的元素也另起一行.</p>
+</li>
+<li><p>元素的高度、宽度、行高以及顶和底边距都可设置.</p>
+</li>
+<li><p>元素宽度在不设置的情况下,是它本身父容器的100%（和父元素的宽度一致),除非设定一个宽度.</p>
+</li>
+</ul>
+<h4 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h4><p>在html中,&lt; span&gt;、&lt; a&gt;、&lt; label&gt;、 &lt; strong&gt; 和&lt; em&gt;就是典型的<em>内联元素(行内元素)</em>(inline)元素.当然<em>块状元素</em>也可以通过代码<strong>display:inline</strong>将元素设置为<em>内联元素</em>.<br>如下代码就是将块状元素div转换为内联元素，从而使div元素具有内联元素特点.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> div&#123;</div><div class="line">     display:inline;</div><div class="line">     &#125;</div><div class="line">......</div><div class="line"></div><div class="line"> <span class="tag">&lt;<span class="name">div</span>&gt;</span>我要变成内联元素<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>   内联元素的特点:</p>
+<ul>
+<li>和其他元素都在一行上.</li>
+<li>元素的<strong>高度、宽度</strong>及顶部和底部边距<strong>不可</strong>设置.</li>
+<li>元素的宽度就是它包含的文字或图片的宽度,不可改变.</li>
+</ul>
+<h4 id="内联块状元素"><a href="#内联块状元素" class="headerlink" title="内联块状元素"></a>内联块状元素</h4><p><em>内联块状元素</em>(inline-block)就是同时具备内联元素、块状元素的特点,代码<strong>display:inline-block</strong>就是将元素设置为内联块状元素.(css2.1新增),&lt; img&gt;、&lt; input&gt;标签就是这种内联块状标签.</p>
+<p>内联块状元素的特点：</p>
+<ul>
+<li>和其他元素都在一行上；</li>
+<li>元素的高度、宽度、行高以及顶和底边距<strong>可</strong>设置。</li>
+</ul>
+<h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3><p>在浏览器下,每一个html元素都会被解析为一个装有东西的盒子.盒子本身有自己的<strong>边框(border)</strong>,盒子里的内容到盒子边框的距离称为<strong>填充(padding)</strong>,盒子边框与其它盒子之间的距离为<strong>边界(margin)</strong>.<br>在css模型设计中,元素真实的宽度和高度不仅仅由width和height来决定,还包括内边距、外边距、边框来组成.</p>
+<h4 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h4><p>盒子模型的<strong>边框</strong>就是围绕着<strong>内容</strong>及<strong>补白</strong>的线,这条线你可以设置它的<strong>粗细</strong>和<strong>样式</strong>和<strong>颜色</strong>.</p>
+<ul>
+<li>border-style(边框样式)常见样式有:dashed(虚线)dotted(点线)solid(实现).</li>
+<li>border-color(边框颜色)中的颜色可设置为十六进制颜色.</li>
+<li><p>border-width(边框宽度)中的宽度可以设置为:thin,medium,thick(但不是很常用),最常用的是像素(px).</p>
+<p>css样式中允许只为一个方向的边框设置样式:</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;border-bottom:1px solid red;&#125;</div></pre></td></tr></table></figure>
+<p>同样也可以使用下面代码实现其他三边(上右左)边框的设置:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">border-top:1px solid red;</div><div class="line">border-right:1px solid red;</div><div class="line">border-lef:1px solid red;</div></pre></td></tr></table></figure>
+<h4 id="宽度和高度"><a href="#宽度和高度" class="headerlink" title="宽度和高度"></a>宽度和高度</h4><p>盒模型宽度和高度和我们平常所说的物体的宽度和高度理解是不一样的,css内定义的宽(width)和高(height),指的是填充以里的<strong>内容范围</strong>.<br>因此一个<strong>元素实际宽度</strong>(盒子的宽度)=左边界+左边框+左填充+内容宽度+右填充+右边框+右边界.<br><img src="http://7xthb7.com2.z0.glb.clouddn.com/20160506/1.jpg" alt=""><br>元素的高度也是同理.</p>
+<h4 id="填充"><a href="#填充" class="headerlink" title="填充"></a>填充</h4><p>元素<strong>内容</strong>与<strong>边框</strong>之间是可以设置距离的,称之为”<strong>填充</strong>“.填充也可分为上、右、下、左(顺时针).<br>如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;padding:20px 10px 15px 30px;&#125;</div></pre></td></tr></table></figure>
+<p><strong>顺序一定不能搞混</strong>,也可以分开写上面的代码.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">    padding-top:20px;</div><div class="line">    padding-right:10px;</div><div class="line">    padding-bottom:15px;</div><div class="line">    padding-left:30px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果上、右、下、左的填充都为10px:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;padding:10px;&#125;</div></pre></td></tr></table></figure>
+<p>如果上下填充一样为10px,左右一样为20px:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;padding:10px 20px;&#125;</div></pre></td></tr></table></figure>
+<h4 id="边界"><a href="#边界" class="headerlink" title="边界"></a>边界</h4><p>元素与其它元素之间的距离可以使用边界(margin)来设置.边界也是可分为上、右、下、左.<br>如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;morgin:20px 10px 15px 30px;&#125;</div></pre></td></tr></table></figure>
+<p>也可以分开写:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">   margin-top:20px;</div><div class="line">   margin-right:10px;</div><div class="line">   margin-bottom:15px;</div><div class="line">   margin-left:30px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果上右下左的边界都为10px:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123; margin:10px&#125;</div></pre></td></tr></table></figure>
+<p>如果上下边界一样为10px,左右一样为20px:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123; margin:10px 20px;&#125;</div></pre></td></tr></table></figure>
+<p> 注意:<strong>padding在边框里,margin在边框外.</strong></p>
+<h2 id="文字格式化排版"><a href="#文字格式化排版" class="headerlink" title="文字格式化排版"></a>文字格式化排版</h2><p>可以使用css样式为网页中的文字设置字体,字号,颜色等样式属性.</p>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><ul>
+<li>网页中的文字设置为宋体:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">body&#123;font-family:"宋体";&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>设置微软雅黑:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">body&#123;font-family:"Microsoft Yahei";&#125;</div></pre></td></tr></table></figure>
+<p> <strong>注意不要设置不常用的字体</strong></p>
+<h4 id="css样式改变文字的样式-粗体-斜体-下划线-删除线"><a href="#css样式改变文字的样式-粗体-斜体-下划线-删除线" class="headerlink" title="css样式改变文字的样式:粗体,斜体,下划线,删除线."></a>css样式改变文字的样式:粗体,斜体,下划线,删除线.</h4><ul>
+<li>粗体:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;font-weight:bold;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>斜体:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;font-style:italic;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>下划线:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;text-decoration:underline;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>删除线:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.oldPrice&#123;text-decoration:line-through;&#125;</div></pre></td></tr></table></figure>
+<h3 id="字号颜色"><a href="#字号颜色" class="headerlink" title="字号颜色"></a>字号颜色</h3><p>如为文字设置字号为12px,字体颜色设置为灰色:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">body&#123;font-size:12px;color:#666&#125;</div></pre></td></tr></table></figure>
+<h3 id="段落排版"><a href="#段落排版" class="headerlink" title="段落排版"></a>段落排版</h3><ul>
+<li>中文文字中的段前习惯两个文字的空白,这个特殊的样式可以用下面代码来实现:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;text-indent:2em;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>行间距:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p&#123;line-height:1.5em;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>中文字间距:<strong>文字间隔</strong>或者<strong>字母间隔</strong>使用 <strong>letter-spacing</strong></li>
+<li>英文单词间距:<strong>word-spacing</strong></li>
+<li>对齐:为块状元素中的文本,图片设置居中样式,可以使用<strong>text-align</strong>.<br>同样也可以设置居左:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">h1&#123;</div><div class="line">    text-align:left;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>还可以设置居右:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">h1&#123;</div><div class="line">    text-align:right;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>自认为今天的内容好烧脑,明天就可以结束整个css的学习了.你们怎么样?</p>
 
           
         
